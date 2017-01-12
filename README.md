@@ -17,7 +17,7 @@ Interface In traffic: 1.3.6.1.2.1.2.2.1.10. ifInOctets
 Interface Out traffic: 1.3.6.1.2.1.2.2.1.16. ifOutOctets
 Memory used: 1.3.6.1.4.1.9.9.48.1.1.1.5.1 ciscoMemoryPoolUsed
 CPU used last minute: 1.3.6.1.4.1.9.9.109.1.1.1.1.4.1 cpmCPUTotal1min
-#of connections currently in use: 1.3.6.1.4.1.9.9.147.1.2.2.2.1.5.40.6 cfwConnectionStatValue 
+Number of connections currently in use: 1.3.6.1.4.1.9.9.147.1.2.2.2.1.5.40.6 cfwConnectionStatValue 
 Tunnels up: 1.3.6.1.4.1.9.9.171.1.2.1.1 cikeGlobalActiveTunnels
 VPN Traffic IN: 1.3.6.1.4.1.9.9.171.1.2.1.3 cikeGlobalInOctets
 VPN Traffic OUT: 1.3.6.1.4.1.9.9.171.1.2.1.11 cikeGlobalOutOctets
