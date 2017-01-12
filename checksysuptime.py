@@ -11,6 +11,5 @@ comm = '{0} {1} {2}'.format("snmpwalk -c private -v2c",hostip,"-s0 1.3.6.1.2.1.1
 aux = os.popen(comm,'r')
 peer = aux.readline().rstrip('\n')
 ind = re.search('\((.+?)\)',peer).group(1)
-print (ind)
 print (str(int(int(ind)/8640000)))
 
