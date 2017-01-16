@@ -6,4 +6,4 @@ Some macros are needed:
 {$SNMP_COMMUNITY} = As usual
 {$PEERIP} = Peer IP of one IPSec Tunnel (if you have more than one just clone the monitor)
 
-The monitors for interfaces use "Discovery". There is simple RegEx which works for me just taking the interfaces containing: TMC or Untrust or Fail on their names. Kindly modify that RegEx to make it fit with you.
+The monitors for interfaces use "Discovery". There is simple RegEx which works for me just taking the interfaces containing: TMC or Untrust or Fail on their names. Kindly modify that RegEx to make it fits with you.
