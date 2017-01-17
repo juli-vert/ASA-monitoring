@@ -693,28 +693,6 @@
                     <host_prototypes/>
                 </discovery_rule>
             </discovery_rules>
-            <macros>
-                <macro>
-                    <macro>{$GI00}</macro>
-                    <value>Untrust</value>
-                </macro>
-                <macro>
-                    <macro>{$GI01}</macro>
-                    <value>TMC-Offi2DC</value>
-                </macro>
-                <macro>
-                    <macro>{$GI02}</macro>
-                    <value>TMC-BCNOffice</value>
-                </macro>
-                <macro>
-                    <macro>{$GI03}</macro>
-                    <value>FailoverIF</value>
-                </macro>
-                <macro>
-                    <macro>{$VLAN198}</macro>
-                    <value>TMC-BCNGuest</value>
-                </macro>
-            </macros>
             <templates/>
             <screens/>
         </template>
