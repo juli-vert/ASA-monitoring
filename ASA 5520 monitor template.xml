@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.0</version>
-    <date>2017-01-13T11:33:10Z</date>
+    <date>2017-01-17T14:25:38Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -104,7 +104,7 @@
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>checksysuptime.py[{$SNMPHOST}]</key>
-                    <delay>600</delay>
+                    <delay>3600</delay>
                     <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
@@ -254,19 +254,19 @@
                     <logtimefmt/>
                 </item>
                 <item>
-                    <name>Memory used</name>
+                    <name>Memory Free</name>
                     <type>4</type>
                     <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <multiplier>0</multiplier>
-                    <snmp_oid>1.3.6.1.4.1.9.9.48.1.1.1.5.1</snmp_oid>
-                    <key>ciscoMemoryPoolUsed</key>
-                    <delay>60</delay>
+                    <multiplier>1</multiplier>
+                    <snmp_oid>1.3.6.1.4.1.9.9.48.1.1.1.6.1</snmp_oid>
+                    <key>ciscoMemoryPoolFree</key>
+                    <delay>120</delay>
                     <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
-                    <value_type>3</value_type>
+                    <value_type>0</value_type>
                     <allowed_hosts/>
-                    <units>MB</units>
+                    <units>GB</units>
                     <delta>0</delta>
                     <snmpv3_contextname/>
                     <snmpv3_securityname/>
@@ -275,7 +275,46 @@
                     <snmpv3_authpassphrase/>
                     <snmpv3_privprotocol>0</snmpv3_privprotocol>
                     <snmpv3_privpassphrase/>
-                    <formula>9,5367431640625e-7</formula>
+                    <formula>9.313225746154785e-10</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>Memory in use</description>
+                    <inventory_link>0</inventory_link>
+                    <applications/>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>Memory used</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <multiplier>1</multiplier>
+                    <snmp_oid>1.3.6.1.4.1.9.9.48.1.1.1.5.1</snmp_oid>
+                    <key>ciscoMemoryPoolUsed</key>
+                    <delay>120</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>GB</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>9.313225746154785e-10</formula>
                     <delay_flex/>
                     <params/>
                     <ipmi_sensor/>
@@ -299,7 +338,7 @@
                     <multiplier>0</multiplier>
                     <snmp_oid>1.3.6.1.4.1.9.9.109.1.1.1.1.4.1</snmp_oid>
                     <key>cpmCPUTotal1min</key>
-                    <delay>60</delay>
+                    <delay>120</delay>
                     <history>7</history>
                     <trends>365</trends>
                     <status>0</status>
@@ -338,7 +377,7 @@
                     <multiplier>0</multiplier>
                     <snmp_oid/>
                     <key>p2-counter.py[{$SNMPHOST},{$PEERIP}]</key>
-                    <delay>120</delay>
+                    <delay>60</delay>
                     <history>14</history>
                     <trends>365</trends>
                     <status>0</status>
@@ -365,45 +404,6 @@
                     <privatekey/>
                     <port/>
                     <description>Number of Phase 2 for each tunnel</description>
-                    <inventory_link>0</inventory_link>
-                    <applications/>
-                    <valuemap/>
-                    <logtimefmt/>
-                </item>
-                <item>
-                    <name>System Uptime</name>
-                    <type>4</type>
-                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
-                    <multiplier>0</multiplier>
-                    <snmp_oid>1.3.6.1.2.1.1.3.0</snmp_oid>
-                    <key>sysUpTime</key>
-                    <delay>60</delay>
-                    <history>7</history>
-                    <trends>365</trends>
-                    <status>0</status>
-                    <value_type>3</value_type>
-                    <allowed_hosts/>
-                    <units>days</units>
-                    <delta>0</delta>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <formula>1,157407407407407e-7</formula>
-                    <delay_flex/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <data_type>0</data_type>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port/>
-                    <description>System uptime in days</description>
                     <inventory_link>0</inventory_link>
                     <applications/>
                     <valuemap/>
@@ -458,7 +458,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid>1.3.6.1.2.1.2.2.1.7.{#SNMPINDEX}</snmp_oid>
                             <key>IfAdminStatus[{#SNMPVALUE}]</key>
-                            <delay>30</delay>
+                            <delay>60</delay>
                             <history>90</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -538,7 +538,7 @@
                             <multiplier>0</multiplier>
                             <snmp_oid>1.3.6.1.2.1.2.2.1.8.{#SNMPINDEX}</snmp_oid>
                             <key>ifOperStatus.[{#SNMPVALUE}]</key>
-                            <delay>120</delay>
+                            <delay>60</delay>
                             <history>7</history>
                             <trends>365</trends>
                             <status>0</status>
@@ -564,7 +564,7 @@
                             <publickey/>
                             <privatekey/>
                             <port/>
-                            <description> Operational status of the port (1=up)</description>
+                            <description>Operational status of the port (1=up)</description>
                             <inventory_link>0</inventory_link>
                             <applications/>
                             <valuemap/>
@@ -612,8 +612,84 @@
                             <application_prototypes/>
                         </item_prototype>
                     </item_prototypes>
-                    <trigger_prototypes/>
-                    <graph_prototypes/>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{Cisco_ASA_template:ifOperStatus.[{#SNMPVALUE}].last(#2)}&lt;&gt;1</expression>
+                            <name>Interface {#SNMPVALUE} down</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description>Link down in {#SNMPVALUE}</description>
+                            <type>0</type>
+                            <dependencies/>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes>
+                        <graph_prototype>
+                            <name>{#SNMPVALUE} IN Traffic</name>
+                            <width>900</width>
+                            <height>400</height>
+                            <yaxismin>0.0000</yaxismin>
+                            <yaxismax>100.0000</yaxismax>
+                            <show_work_period>1</show_work_period>
+                            <show_triggers>1</show_triggers>
+                            <type>0</type>
+                            <show_legend>1</show_legend>
+                            <show_3d>0</show_3d>
+                            <percent_left>0.0000</percent_left>
+                            <percent_right>0.0000</percent_right>
+                            <ymin_type_1>0</ymin_type_1>
+                            <ymax_type_1>0</ymax_type_1>
+                            <ymin_item_1>0</ymin_item_1>
+                            <ymax_item_1>0</ymax_item_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>0</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>1A7C11</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>Cisco_ASA_template</host>
+                                        <key>ifInOctets.[{#SNMPVALUE}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                        <graph_prototype>
+                            <name>{#SNMPVALUE} OUT Traffic</name>
+                            <width>900</width>
+                            <height>400</height>
+                            <yaxismin>0.0000</yaxismin>
+                            <yaxismax>100.0000</yaxismax>
+                            <show_work_period>1</show_work_period>
+                            <show_triggers>1</show_triggers>
+                            <type>0</type>
+                            <show_legend>1</show_legend>
+                            <show_3d>0</show_3d>
+                            <percent_left>0.0000</percent_left>
+                            <percent_right>0.0000</percent_right>
+                            <ymin_type_1>0</ymin_type_1>
+                            <ymax_type_1>0</ymax_type_1>
+                            <ymin_item_1>0</ymin_item_1>
+                            <ymax_item_1>0</ymax_item_1>
+                            <graph_items>
+                                <graph_item>
+                                    <sortorder>0</sortorder>
+                                    <drawtype>0</drawtype>
+                                    <color>1A7C11</color>
+                                    <yaxisside>0</yaxisside>
+                                    <calc_fnc>2</calc_fnc>
+                                    <type>0</type>
+                                    <item>
+                                        <host>Cisco_ASA_template</host>
+                                        <key>ifOutOctets.[{#SNMPVALUE}]</key>
+                                    </item>
+                                </graph_item>
+                            </graph_items>
+                        </graph_prototype>
+                    </graph_prototypes>
                     <host_prototypes/>
                 </discovery_rule>
             </discovery_rules>
@@ -643,4 +719,132 @@
             <screens/>
         </template>
     </templates>
+    <triggers>
+        <trigger>
+            <expression>{Cisco_ASA_template:cpmCPUTotal1min.last(#3)}&gt;85</expression>
+            <name>CPU usage too high</name>
+            <url/>
+            <status>0</status>
+            <priority>3</priority>
+            <description>The CPU is hitting 85% constantly</description>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Cisco_ASA_template:checkfailover.py[{$SNMPHOST}].last()}&lt;&gt;1</expression>
+            <name>Failover perfomed</name>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Cisco_ASA_template:ciscoMemoryPoolUsed.last(#3)}&gt;1.6</expression>
+            <name>Memory usage too high</name>
+            <url/>
+            <status>0</status>
+            <priority>3</priority>
+            <description>Memory in use higher than 1.6GB the last 3 checks</description>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Cisco_ASA_template:cfwConnectionStatValue.last()}&gt;10000</expression>
+            <name>Too many connections</name>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description>More than 10K active connections</description>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Cisco_ASA_template:p2-counter.py[{$SNMPHOST},{$PEERIP}].last(#2)}=0</expression>
+            <name>Tunnel {$PEERIP} have no active P2</name>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description>There is no P2 in an active tunnel</description>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Cisco_ASA_template:cikeGlobalActiveTunnels.last(#2)}&lt;&gt;2</expression>
+            <name>VPN down</name>
+            <url/>
+            <status>0</status>
+            <priority>3</priority>
+            <description>We have 2 IPSec tunnels configured if we detect there are less than 2 triggers an error</description>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+    </triggers>
+    <graphs>
+        <graph>
+            <name>VPN incoming traffic</name>
+            <width>900</width>
+            <height>400</height>
+            <yaxismin>0.0000</yaxismin>
+            <yaxismax>100.0000</yaxismax>
+            <show_work_period>1</show_work_period>
+            <show_triggers>1</show_triggers>
+            <type>0</type>
+            <show_legend>1</show_legend>
+            <show_3d>0</show_3d>
+            <percent_left>0.0000</percent_left>
+            <percent_right>0.0000</percent_right>
+            <ymin_type_1>0</ymin_type_1>
+            <ymax_type_1>0</ymax_type_1>
+            <ymin_item_1>0</ymin_item_1>
+            <ymax_item_1>0</ymax_item_1>
+            <graph_items>
+                <graph_item>
+                    <sortorder>0</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>1A7C11</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Cisco_ASA_template</host>
+                        <key>cikeGlobalInOctets</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>VPN Outgoing traffic</name>
+            <width>900</width>
+            <height>400</height>
+            <yaxismin>0.0000</yaxismin>
+            <yaxismax>100.0000</yaxismax>
+            <show_work_period>1</show_work_period>
+            <show_triggers>1</show_triggers>
+            <type>0</type>
+            <show_legend>1</show_legend>
+            <show_3d>0</show_3d>
+            <percent_left>0.0000</percent_left>
+            <percent_right>0.0000</percent_right>
+            <ymin_type_1>0</ymin_type_1>
+            <ymax_type_1>0</ymax_type_1>
+            <ymin_item_1>0</ymin_item_1>
+            <ymax_item_1>0</ymax_item_1>
+            <graph_items>
+                <graph_item>
+                    <sortorder>0</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>1A7C11</color>
+                    <yaxisside>0</yaxisside>
+                    <calc_fnc>2</calc_fnc>
+                    <type>0</type>
+                    <item>
+                        <host>Cisco_ASA_template</host>
+                        <key>cikeGlobalOutOctets</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+    </graphs>
 </zabbix_export>
